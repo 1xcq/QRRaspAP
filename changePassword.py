@@ -51,6 +51,7 @@ def change_password(password):
             '/etc/hostapd/hostapd.conf'
         ]
     )
+    subprocess.run(['systemctl', 'restart', 'hostapd.service'])
 
 if __name__ == "__main__":
     ssid = get_ssid()
@@ -59,7 +60,3 @@ if __name__ == "__main__":
     print('SSID:', ssid,  wpa, 'PW:', pw)
     create_qr_code(ssid, wpa, pw)
     change_password(pw)
-    #TODO: Restart hostapd.service
-
-
-

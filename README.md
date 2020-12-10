@@ -4,8 +4,6 @@ The QRRaspAP project was created as part of a university course.
 Our goal was to create a WLAN access point which automatically changes the passphrase every X days/weeks. Additionally a QRCode is displayed to connect to the network in a fast way. 
 Usage could be for example as a guest network. 
 
-
-
 ## Prerequisites
 
 On your raspberrypi you need all this:
@@ -33,8 +31,8 @@ sudo pip3 install gpiozero
 
 ## Getting Started
 
-
-
+Clone the repository and run setup.sh.
+It will create all the config files and setup the access point.
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)

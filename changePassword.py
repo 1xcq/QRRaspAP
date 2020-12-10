@@ -56,7 +56,7 @@ if __name__ == "__main__":
     ssid = get_ssid()
     wpa = get_wpa()
     pw = get_random_pw()
-    print('SSID: ', ssid, ' ', wpa, ' PW: ', pw)
+    print('SSID:', ssid,  wpa, 'PW:', pw)
     create_qr_code(ssid, wpa, pw)
     change_password(pw)
 

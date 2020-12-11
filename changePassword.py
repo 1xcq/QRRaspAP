@@ -38,8 +38,7 @@ def create_qr_code(ssid, security, password):
         security=security,
         password=password
     ))
-    qr.png('qrcode.png', scale=8)
-    print(qr.terminal())
+    qr.png('qrcode.png', scale=9)
 
 def change_password(password):
     subprocess.run(

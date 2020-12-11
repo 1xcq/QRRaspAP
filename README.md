@@ -1,7 +1,7 @@
 # QRRaspAp
 
 The QRRaspAP project was created as part of a university course. 
-Our goal was to create a WLAN access point which automatically changes the passphrase every X days/weeks. Additionally a QRCode is displayed to connect to the network in a fast way. 
+Our goal was to create a WLAN access point which automatically changes the passphrase every X days/weeks. Additionally a QRCode is generated to connect to the network in a fast way. The QRCode will be saved in the home directory of your Pi.
 Usage could be for example as a guest network. 
 
 ## Prerequisites

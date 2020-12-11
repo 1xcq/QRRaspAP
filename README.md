@@ -20,6 +20,7 @@ Install the necessary packages:
 sudo apt-get install hostapd dnsmasq
 sudo DEBIAN_FRONTEND=noninteractive apt install -y netfilter-persistent iptables-persistent
 sudo apt-get install python3 python3-pip
+sudo apt-get install fim
 ```
 
 Install pip packages:

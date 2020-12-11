@@ -33,6 +33,7 @@ execute_script() {
 
     ### Script in PATH
     cp "${SCRIPT_DIR}/changePassword.py" "/usr/local/bin/changePassword.py"
+    cp "${SCRIPT_DIR}/buttonInput.py" "/usr/local/bin/buttonInput.py"
 
     ### Crontab
     echo "* 3 * * 1 root changePassword.py > /dev/tty1" >> "/etc/cron.d/changePassword"

@@ -7,13 +7,8 @@ import pyqrcode as pqr
 import subprocess
 
 def get_random_pw():
-    temp= string.ascii_letters + string.digits #+ string.punctuation
-
-    #remove problematic characters
-    #alphabet = temp.replace('\'', '').replace('\\', '').replace('\"', '').replace('\`', '').replace(';', '')
-
-    #generate a random password
-    password = ''.join(random.choice(temp) for i in range(10))
+    alphabet = string.ascii_letters + string.digits
+    password = ''.join(random.choice(alphabet) for i in range(12))
     return password
 
 def get_hostapd_text():

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-import random
+import secrets
 import string
 import re
 import pyqrcode as pqr
@@ -8,7 +8,7 @@ import subprocess
 
 def get_random_pw():
     alphabet = string.ascii_letters + string.digits
-    password = ''.join(random.choice(alphabet) for i in range(12))
+    password = ''.join(secrets.choice(alphabet) for i in range(12))
     return password
 
 def get_hostapd_text():

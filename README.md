@@ -28,6 +28,7 @@ Install pip packages:
 ```
 sudo pip3 install pyqrcode
 sudo pip3 install gpiozero
+sudo pip3 install pypng
 ```
 
 ## Getting Started

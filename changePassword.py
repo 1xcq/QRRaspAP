@@ -33,7 +33,7 @@ def create_qr_code(ssid, security, password):
         security=security,
         password=password
     ))
-    qr.png('qrcode.png', scale=9)
+    qr.png('/home/pi/qrcode.png', scale=9)
 
 def change_password(password):
     subprocess.run(

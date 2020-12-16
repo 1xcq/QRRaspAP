@@ -14,6 +14,8 @@ execute_script() {
     # TODO: Don't append but just remove '#' in front of existing entry
     echo "net.ipv4.ip_forward=1" >> /etc/sysctl.d/routed-ap.conf
 
+    sudo rfkill unblock wlan
+
     ### iptables firewall
     sudo iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
     sudo netfilter-persistent save
@@ -36,7 +38,8 @@ execute_script() {
     cp "${SCRIPT_DIR}/buttonInput.py" "/usr/local/bin/buttonInput.py"
 
     ### Crontab
-    echo "* 3 * * 1 root changePassword.py > /dev/tty1" >> "/etc/cron.d/changePassword"
+    sudo chown root:root "${RES_DIR}/qrcodepassword"
+    sudo cp "${RES_DIR}/qrcodepassword" "/etc/cron.d/qrcodepassword"
 
     sudo reboot
 }

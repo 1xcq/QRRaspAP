@@ -14,8 +14,6 @@ execute_script() {
     # TODO: Don't append but just remove '#' in front of existing entry
     echo "net.ipv4.ip_forward=1" >> /etc/sysctl.d/routed-ap.conf
 
-    sudo rfkill unblock wlan
-
     ### iptables firewall
     sudo iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
     sudo netfilter-persistent save
@@ -26,6 +24,8 @@ execute_script() {
     dhcp-range=192.168.4.2,192.168.4.20,255.255.255.0,24h
     domain=wlan
     address=/gw.wlan/192.168.4.1" >> /etc/dnsmasq.conf
+
+    sudo rfkill unblock wlan
 
     ### Access Point 
     sudo systemctl unmask hostapd
